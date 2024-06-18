@@ -21,9 +21,6 @@ const FeatureSection = () => {
     <div className="pb-24">
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
         <div className="sm:text-center">
-          <h2 className="text-lg font-semibold leading-8 text-accent-600">
-            Offerings
-          </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-primaryText-800 dark:text-primaryText-100 sm:text-4xl">
             {siteMetadata.featureSection.title}
           </p>

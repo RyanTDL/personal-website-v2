@@ -3,30 +3,15 @@ import { RiShoppingBagLine, RiCarLine } from 'react-icons/ri'
 import { IoFastFoodOutline } from 'react-icons/io5'
 
 const siteMetadata = {
-  title: 'Best Nextjs Tailwind Portfolio',
+  title: "Ryan's Portfolio Site",
   description:
-    'This is where you can learn about me and my work. I am a full stack developer and I love to build things.',
-  author: 'Curtis Warcup',
-  authorHeadline: 'Full Stack Developer, amateur pizza critic 🍕',
+    'A simple website introducing myself!',
+  authorHeadline: 'Full Stack Developer, Aspiring Entrepreneur, Full-Time Idiot',
   authorAbout:
-    "Hi, I'm Curtis, a full stack developer. I created this to help my mom create a website for all her crazy business ideas. I hope you like it!",
-  authorAboutExtended:
-    "Curtis is a Canadian-born, living in beautify Vancouver, BC. \n \n In his personal life, Curtis is an avid cyclist and health nut. He enjoys making weekly meal preps and running with his dog. When he's not coding, exercising, or cooking, Curtis can be found in various mechanical keyboard enthusiast forums, scoping out his next purchase. I also like eating food, especially pizza.",
+    "Hey there! I'm Ryan, a second year student at the National University of Singapore (NUS) and an aspiring software engineer. Currently in my second year of study, I am immersing myself in the world of software development and generative AI. \n \n I have a passion for using technology to create positive change. Whether it is developing apps that solve real-world problems or exploring new innovative solutions, I am constantly seeking opportunities to collaborate on projects that can make tangible impact. If you're interested in working together or just want to chat, feel free to reach out!",
   socials: {
-    twitter: 'https://twitter.com/curtiswarcup',
-    github: 'https://github.com/Cwarcup',
-    linkedin: 'https://www.linkedin.com/in/curtiswarcup/',
-    instagram: 'https://www.instagram.com/curtiswarcup/',
-    facebook: 'https://www.facebook.com/curtiswarcup',
-  },
-  email: 'curtis.gwarcup@gmail.com',
-  phoneNumber: '123-456-7890',
-  contactTitle: 'Get in touch',
-  contactSubtitle:
-    "I am currently making banging pizza's and amazing websites. If you want to get in touch, please use the form below.",
-  analytics: {
-    plausibleDataDomain: 'https://cwarcup.com/', // e.g. tailwind-nextjs-starter-blog.vercel.app
-    googleAnalyticsId: 'G-XXXXXXX', // e.g. UA-000000-2 or G-XXXXXXX
+    github: 'https://github.com/RyanTDL',
+    linkedin: 'https://www.linkedin.com/in/ryan-teo/',
   },
   // TODO: Add the name of the navbar items and the corresponding page. Used in the Header and Footer components.
   siteNavLinks: [
@@ -35,27 +20,15 @@ const siteMetadata = {
       href: '/',
     },
     {
-      name: 'About',
-      href: '/about',
-    },
-    {
-      name: 'Experience',
+      name: 'Work',
       href: '/experience',
-    },
-    {
-      name: 'Offerings',
-      href: '/offerings',
-    },
-    {
-      name: 'Contact',
-      href: '/contact',
     },
     {
       name: 'Projects',
       href: '/projects',
     },
   ],
-  siteRepo: 'https://github.com/Cwarcup/',
+  // siteRepo: 'https://github.com/Cwarcup/',
   offerings: [
     {
       title: 'Pizza Delivery',
@@ -91,10 +64,9 @@ const siteMetadata = {
     imageAttribution: 'Photo by @johanemanuel on Unsplash',
   },
   featureSection: {
-    title: 'Why Choose Me?',
+    title: 'My Skills',
     description:
-      'I am a full stack developer and I love to build things. I can also make a crappy pizza.',
-    //TODO also need to update the features array in the FeatureSection component
+      'Currently doing my best to level up my skills in these following areas:',
   },
   experience: {
     title: 'Things I’ve done trying to put my dent in the universe.',

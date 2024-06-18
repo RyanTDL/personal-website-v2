@@ -3,7 +3,6 @@ import { Container } from '@/components/Container'
 import { TwitterIcon, GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
 import SocialLink from '@/components/SocialLink'
 import Testimonial from '@/components/Testimonial'
-import Faq from '@/components/Faq'
 import FeatureSection from '@/components/FeatureSection'
 import CallToAction from '@/components/CallToAction'
 import DivideLine from '@/components/DivideLine'
@@ -47,11 +46,6 @@ const Home = () => {
           </p>
           <div className="flex gap-6 mt-6">
             <SocialLink
-              href={siteMetadata.socials.twitter}
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
               href={siteMetadata.socials.github}
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
@@ -65,9 +59,8 @@ const Home = () => {
         </div>
       </Container>
       <DivideLine />
-      <FeatureSection />
       <Testimonial />
-      <Faq />
+      <FeatureSection />
       <CallToAction />
     </>
   )
