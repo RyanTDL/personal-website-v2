@@ -7,6 +7,7 @@ import FeatureSection from '@/components/FeatureSection'
 import CallToAction from '@/components/CallToAction'
 import DivideLine from '@/components/DivideLine'
 import siteMetadata from '@/data/siteMetadata'
+import TypewriterComponent from 'typewriter-effect'
 
 const Home = () => {
   return (
@@ -37,29 +38,36 @@ const Home = () => {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <Container className="mt-32">
-        <div className="grid max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-primaryText-800 dark:text-primaryText-100 sm:text-5xl">
-            {siteMetadata.authorHeadline}
-          </h1>
-          <p className="mt-6 text-base text-primaryText-600 dark:text-primaryText-400">
-            {siteMetadata.authorAbout}
-          </p>
-          <div className="flex gap-6 mt-6">
-            <SocialLink
-              href={siteMetadata.socials.github}
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href={siteMetadata.socials.linkedin}
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
+          <span className="text-4xl sm:text-6xl font-medium tracking-tight text-white px-4 py-2 border border-transparent rounded-md bg-accent-400">
+            Introducing me:
+          </span>
+          <div className="text-5xl sm:text-7xl font-bold tracking-tight text-primaryText-800 dark:text-primaryText-100 mt-6">
+            <TypewriterComponent
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString('Full Stack Developer')
+                  .pauseFor(1500)
+                  .deleteAll()
+                  .typeString('Aspiring Entrepreneur')
+                  .pauseFor(1500)
+                  .deleteAll()
+                  .typeString('Full Time Student')
+                  .pauseFor(1500)
+                  .deleteAll()
+                  .typeString('Part Time Student')
+                  .pauseFor(1500)
+                  .deleteAll()
+                  .start()
+                }
+              }
+              options={{
+                loop: true,
+              }}
             />
           </div>
-        </div>
       </Container>
-      <DivideLine />
       <Testimonial />
+      <DivideLine />
       <FeatureSection />
       <CallToAction />
     </>

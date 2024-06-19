@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
+import PersonalImage from 'public/me.jpg'
 
 const Testimonial = () => {
   return (
-    <div className="my-10 lg:mt-12 lg:mb-32">
+    <div className="my-10 lg:mt-32 lg:mb-12">
       <div className="pb-16 bg-fixed bg-center bg-cover bg-gradient-to-b from-gradientStart-500 to-gradientEnd-500 dark:from-gradientStart-700 dark:to-gradientEnd-900 lg:relative lg:z-10 lg:pb-0">
         <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
           <div className="relative lg:-my-8">
@@ -15,7 +16,7 @@ const Testimonial = () => {
               <div className="overflow-hidden shadow-xl aspect-w-10 aspect-h-6 rounded-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
                 <Image
                   className="object-cover lg:h-full lg:w-full"
-                  src={siteMetadata.testimonial.imgUrl}
+                  src={PersonalImage}
                   alt="testimonials"
                   width={500}
                   height={500}
@@ -39,15 +40,11 @@ const Testimonial = () => {
                   <p className="mt-6 text-2xl font-medium text-primaryText-100">
                     {siteMetadata.testimonial.comment}
                   </p>
+                  <p className="mt-6 text-2xl font-medium text-primaryText-100">
+                    {siteMetadata.testimonial.commentExtended}
+                  </p>
                 </div>
-                <footer className="mt-6">
-                  <p className="text-base font-medium text-primaryText-100">
-                    {siteMetadata.testimonial.author}
-                  </p>
-                  <p className="text-base font-medium text-primaryText-200">
-                    {siteMetadata.testimonial.authorTitle}
-                  </p>
-                </footer>
+
               </blockquote>
             </div>
           </div>

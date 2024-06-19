@@ -1,19 +1,75 @@
-import { RiRunLine, RiSignalWifi3Line } from 'react-icons/ri'
 import siteMetadata from '@/data/siteMetadata'
+import HTMLIcon from 'public/icons/HTML'
+import CSSIcon from 'public/icons/CSS'
+import JavaScriptIcon from 'public/icons/Javascript'
+import TypescriptIcon from 'public/icons/Typescript'
+import ReactIcon from 'public/icons/React'
+import NextJSIcon from 'public/icons/NextJS'
+import FigmaIcon from 'public/icons/Figma'
+import GitIcon from 'public/icons/Git'
+import GithubIcon from 'public/icons/Github'
+import PythonIcon from 'public/icons/Python'
+import CPPIcon from 'public/icons/CPP'
+import JavaIcon from 'public/icons/Java'
+import ArduinoIcon from 'public/icons/Arduino'
 
 // TODO: Add your own features here. Make sure to add the icon from Remix-Design's repo:
 const features = [
   {
-    name: 'Pizza Delivery',
-    description:
-      'I will teach you how to properly deliver pizza, ensuring that your customers are happy and your tips are high. Most pizza delivery drivers are not taught how to properly deliver pizza, and as a result, they are not making the most money they could be.',
-    icon: RiRunLine,
+    name: 'HTML',
+    icon: <HTMLIcon />
   },
   {
-    name: 'Pizza Making',
-    description:
-      'This three-hour pizza class will offer our attendees the opportunity to craft homemade dough, prepare the pizza and cook a delicious meal to enjoy at the end of class.',
-    icon: RiSignalWifi3Line,
+    name: 'CSS',
+    icon: <CSSIcon />
+  },
+  {
+    name: 'Javascript',
+    icon: <JavaScriptIcon />
+  },
+  {
+    name: 'Typescript',
+    icon: <TypescriptIcon />
+  },
+  {
+    name: 'React',
+    icon: <ReactIcon />
+  },
+  {
+    name: 'React Native',
+    icon: <ReactIcon />
+  },
+  {
+    name: 'Next.JS',
+    icon: <NextJSIcon />
+  },
+  {
+    name: 'Figma',
+    icon: <FigmaIcon />
+  },
+  {
+    name: 'Git',
+    icon: <GitIcon />
+  },
+  {
+    name: 'Github',
+    icon: <GithubIcon />
+  },
+  {
+    name: 'Python',
+    icon: <PythonIcon />
+  },
+  {
+    name: 'C++',
+    icon: <CPPIcon />
+  },
+  {
+    name: 'Java',
+    icon: <JavaIcon />
+  },
+  {
+    name: 'Arduino',
+    icon: <ArduinoIcon />
   },
 ]
 const FeatureSection = () => {
@@ -29,26 +85,21 @@ const FeatureSection = () => {
           </p>
         </div>
 
-        <div className="max-w-lg mt-20 sm:mx-auto md:max-w-none">
-          <div className="grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
-            {features.map((feature) => (
-              <div
-                key={feature.name}
-                className="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row"
-              >
-                <div className="flex items-center justify-center w-12 h-12 text-white rounded-xl bg-accent-500 sm:shrink-0">
-                  <feature.icon className="w-8 h-8" aria-hidden="true" />
+        <div className="max-w-xl mt-20 sm:mx-auto md:max-w-none">
+          <div className='flex justify-center w-full'>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-8 md:gap-y-10 gap-x-5">
+              {features.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className='p-6 shadow-lg rounded-xl hover:scale-110 ease-in duration-200 border-2 bg-primaryText-100 border-primaryText-100 transform hover:-translate-y-1 hover:shadow-xl hover:border-primaryText-50 dark:hover:border-primaryText-50 hover:bg-primaryText-50 dark:hover:bg-primaryText-900 dark:hover:text-primaryText-50 hover:text-primaryText'
+                  >
+                    <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                        <h3 className=''>{skill.name}</h3>    
+                        {skill.icon}                
+                    </div>
                 </div>
-                <div className="sm:min-w-0 sm:flex-1">
-                  <p className="text-lg font-semibold leading-8 text-primaryText-800 dark:text-primaryText-100">
-                    {feature.name}
-                  </p>
-                  <p className="mt-2 text-base leading-7 text-primaryText-600 dark:text-primaryText-400">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
