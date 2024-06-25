@@ -69,7 +69,6 @@ export default function Projects() {
     <>
       <Head>
         <title>Projects</title>
-        <meta name="description" content="Personal projects by Curtis Warcup" />
       </Head>
       <SimpleLayout>
         <ul
