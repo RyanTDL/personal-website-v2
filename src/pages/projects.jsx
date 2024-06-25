@@ -5,37 +5,52 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import siteMetadata from '@/data/siteMetadata'
 
-import ecomLogo from '@/images/projects/ecom.svg'
-import bananaLogo from '@/images/projects/bananaApp.svg'
-import supaSnacksLogo from '@/images/projects/supaSnacks.svg'
-import payByFonieLogo from '@/images/projects/payByFonie.svg'
+import lifequest from '@/images/projects/lifequest.jpeg'
+import packback from '@/images/projects/packback.jpeg'
+import pokemon from '@/images/projects/pokemon.jpeg'
+import regen from '@/images/projects/regen.jpeg'
+import steer from '@/images/projects/steer.jpeg'
+import website from '@/images/projects/website.jpeg'
+
 
 // TODO: Add your own projects here. Logo images from https://heroicons.com/
 const projectsData = [
   {
-    title: 'E-commerce Website with TypeScript, React, Redux and Firebase',
-    description: `This is a project that I built while learning React and Redux. It is a fully functional e-commerce website that allows users to sign in with their Google account, add items to their cart, and make payments with Stripe. It is built with TypeScript, React, Redux, Firebase, Stripe, and Tailwind.`,
-    logo: ecomLogo,
-    href: 'https://github.com/Cwarcup/ecom-firebase',
+    title: 'LifeQuest: Your Gamified Productivity App',
+    description: `LifeQuest is a gamified productivity app that helps you track your daily habits in an engaging manner. It's a full-stack app built with React Native & Firebase, meant to make keeping track of your habits fun and rewarding.`,
+    logo: lifequest,
+    href: 'https://github.com/RyanTDL/NUS-Orbital-2023',
   },
   {
-    title: 'Is this a banana?',
-    description: `Is this a banana? No. Maybe? I don't know. Use this app to find out. I wanted to learn more about machine learning and how to use TensorFlow.js. I explored the TensorFlow.js website and found a pre-trained image classification model called MobileNet. I used this model to classify images of bananas and other objects.`,
-    logo: bananaLogo,
-    href: 'https://github.com/Cwarcup/wtf_is_this',
+    title: 'STEER Challo',
+    description: `STEER Challo is a booking app that connects travellers with local homestays & guides in the Indian Himalayas. It's a full-stack app built with React Native & Firebase, meant to help empower local communities within Mukteshwar.`,
+    logo: steer,
+    href: 'https://github.com/RyanTDL/steer-mobile-app-1',
   },
   {
-    title: 'Supa Snacks',
-    description: `Supa Snacks is a mini-project to learn Supabase and introduce myself to React-Query. It's a simple app that allows you to add snacks to a list, edit and delete from. Users can also change the order of the snacks in the list. It is built using TypeScript, React, React-Query, Supabase and React Router Dom.`,
-    logo: supaSnacksLogo,
-    href: 'https://github.com/Cwarcup/supa-snacks',
+    title: 'Pokemon Team Builder',
+    description: `Pokemon Team Builder is a mini-project to learn Next.js, Tailwind CSS & Typescript. It's a simple website that allows you to create a team of 6 Pokemon, leveraging the PokeAPI to fetch Pokemon data.`,
+    logo: pokemon,
+    href: 'https://github.com/RyanTDL/Pokemon-Team-Builder',
   },
   {
-    title: 'PayByFonie',
-    description: `PayByFonie is a play on the app PayByPhone, a parking app that allows you to pay for parking via your phone. PayByFonie is a similar app, but allows you to search a destination and view parking meter data near that location. Users can search a location using the MapBox API, view the price and time limit of parking meters near that location, and obtain the PayByPhone meter number to pay for that meter. The app was built using React, and Node.js.`,
-    logo: payByFonieLogo,
-    href: 'https://github.com/Cwarcup/free-parking-mapper',
+    title: 'Personal Website v1',
+    description: `This personal portfolio website is a mini-project to learn Next.js, Tailwind CSS & Typescript. It's a simple website that showcases my projects, experience & skills`,
+    logo: website,
+    href: 'https://github.com/RyanTDL/Personal-Website',
   },
+  {
+    title: 'Project PackBack',
+    description: `Project PackBack is an initiative to reduce food packaging waste in Singapore. Our solution is a meal subscription service that delivers meals in reusable containers, incorporating elements of gamification.`,
+    logo: packback,
+    href: 'https://www.canva.com/design/DAF6HywRNWM/nWrYduu9ekPDtdEwwjIHrw/edit?utm_content=DAF6HywRNWM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
+  },
+  {
+    title: 'REGEN: Mental Wellness App',
+    description: `REGEN is a mental wellness app that serves to provide accessible mental health resources to youths. It aims to address shortcomings in existing mental health solutions, such as their over-generalised approach and long waiting times.`,
+    logo: regen,
+    href: 'https://www.canva.com/design/DAGJImdhohA/-CuZOkii_M1oumv2_awbQQ/edit?utm_content=DAGJImdhohA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
+  }
 ]
 
 function LinkIcon(props) {
@@ -62,19 +77,13 @@ export default function Projects() {
           className="grid grid-cols-1 gap-x-12 gap-y-16 md:grid-cols-2"
         >
           {projectsData.map((project) => {
-            console.log(project)
             return (
               <Card as="li" key={project.title}>
-                <div className="relative z-10 flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                  <Image
-                    src={project.logo}
-                    alt=""
-                    className="w-8 h-8"
-                    unoptimized
-                    width={32}
-                    height={32}
-                  />
-                </div>
+                <Image
+                  src={project.logo}
+                  alt=""
+                  className="object-cover w-full h-52 rounded-xl"
+                />
                 <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                   <Card.Link href={project.href}>{project.title}</Card.Link>
                 </h2>

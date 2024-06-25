@@ -6,6 +6,9 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import { RiLinksLine } from 'react-icons/ri'
 import siteMetadata from '@/data/siteMetadata'
 import logoApple from '@/images/logos/apple.svg'
+import SAF from '@/images/photos/saf.png'
+import LFG from '@/images/photos/lfg.png'
+import ASTAR from '@/images/photos/astar.jpeg'
 
 // TODO: If you want to include the logo of the company, I suggesting importing the svg from Remix-Design's repo: https://github.com/Remix-Design/RemixIcon/tree/master/icons/Logos
 
@@ -21,7 +24,7 @@ const experiences = [
       'Developed and maintained a comprehensive training database using Microsoft Excel for over 350 soldiers.',
     ],
     link: { url: 'https://www.mindef.gov.sg/web/portal/mindef/home', label: 'Singapore Armed Forces' },
-    logo: logoApple,
+    logo: SAF,
   },
   {
     title: 'Robotics Intern',
@@ -33,7 +36,7 @@ const experiences = [
       'Designed a user-friendly interface using HTML and CSS to facilitate real-time control and movement of the robotic system.',
     ],
     link: { url: 'https://www.a-star.edu.sg/', label: 'A*STAR - Agency for Science, Technology and Research' },
-    logo: logoApple,
+    logo: ASTAR,
   },
   {
     title: 'Software Engineer Intern',
@@ -45,7 +48,7 @@ const experiences = [
       'Contributed to new feature ideation through product management meetings and user research',
     ],
     link: { url: 'https://www.lfg.travel/', label: 'LFG Travel' },
-    logo: logoApple,
+    logo: LFG,
   },
 ]
 
@@ -69,21 +72,21 @@ export default function Resume() {
         >
           {experiences.map((experience, index) => (
             <Card key={index}>
-              <div className="relative z-10 flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md shadow-primaryText-800/5 ring-1 ring-primaryText-900/5 dark:border dark:border-primaryText-700/50 dark:bg-primaryText-800 dark:ring-0">
-                <Image
-                  src={experience.logo}
-                  alt={experience.company}
-                  className="w-8 h-8"
-                  unoptimized
-                  width={32}
-                  height={32}
-                />
+              <div className='flex justify-start items-center gap-2 mb-4'>
+                <div className='w-1/3 aspect-square'>
+                  <Image
+                    src={experience.logo}
+                    alt={experience.company}
+                    className="object-cover rounded-xl"
+                  />
+                </div>
+                <h2 className="flex justify-center items-center text-base font-semibold text-primaryText-800 dark:text-primaryText-100">
+                  <Card.Link href={experience.link.url}>
+                    {experience.title} at {experience.company}
+                  </Card.Link>
+                </h2>
               </div>
-              <h2 className="mt-6 text-base font-semibold text-primaryText-800 dark:text-primaryText-100">
-                <Card.Link href={experience.link.url}>
-                  {experience.title} at {experience.company}
-                </Card.Link>
-              </h2>
+              <p className='text-base font-normal'>{experience.date}</p>
               <Card.Description>
                 {experience.description.map((item, index) => (
                   <li className="ml-4 list-disc" key={`description-${index}`}>
