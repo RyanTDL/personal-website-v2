@@ -68,7 +68,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects - {siteMetadata.author}</title>
+        <title>Projects</title>
         <meta name="description" content="Personal projects by Curtis Warcup" />
       </Head>
       <SimpleLayout>

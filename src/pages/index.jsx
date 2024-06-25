@@ -14,7 +14,6 @@ const Home = () => {
     <>
       <Head>
         <title>{siteMetadata.title}</title>
-        <meta name="description" content={siteMetadata.description} />
         <link
           rel="apple-touch-icon"
           sizes="76x76"

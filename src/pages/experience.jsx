@@ -56,11 +56,7 @@ export default function Resume() {
   return (
     <>
       <Head>
-        <title>Experience - {siteMetadata.author}</title>
-        <meta
-          name={`Work experience of ${siteMetadata.author}`}
-          content={siteMetadata.experience.title}
-        />
+        <title>Experience</title>
       </Head>
       <SimpleLayout>
         <h2 className="mb-6 text-3xl font-bold tracking-tight text-primaryText-800 dark:text-primaryText-100 sm:text-4xl">
