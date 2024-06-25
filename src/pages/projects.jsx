@@ -56,13 +56,10 @@ export default function Projects() {
         <title>Projects - {siteMetadata.author}</title>
         <meta name="description" content="Personal projects by Curtis Warcup" />
       </Head>
-      <SimpleLayout
-        title="Projects I've worked on"
-        intro="These are some of the projects that I'm most proud of. I've built them to learn new technologies, or to solve a problem that I've encountered."
-      >
+      <SimpleLayout>
         <ul
           role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-x-12 gap-y-16 md:grid-cols-2"
         >
           {projectsData.map((project) => {
             console.log(project)

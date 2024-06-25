@@ -35,9 +35,9 @@ const siteMetadata = {
       'Currently doing my best to level up my skills in these following areas:',
   },
   experience: {
-    title: 'Things I’ve done trying to put my dent in the universe.',
+    title: 'Work Experience',
     intro:
-      "I have never delivered pizza before, but I have made it. I don't think you should hire me for my pizza skills, but I'm sure I'm a great developer. I've been coding for a long time, and my mom says I'm pretty good at it.",
+      "Here's what I have been up to in the past few years:",
     //TODO also need to update the experience array in the ExperienceSection component. This is because of the icons used.
     education: [
       {

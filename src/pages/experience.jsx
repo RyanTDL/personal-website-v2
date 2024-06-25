@@ -12,29 +12,39 @@ import logoApple from '@/images/logos/apple.svg'
 // TODO: Add your own work experience here
 const experiences = [
   {
-    title: 'Lead',
-    company: 'Apple',
-    date: '2018 - Present',
+    title: 'Commander',
+    company: 'Singapore Armed Forces',
+    date: 'Aug 2020 - Dec 2021',
     description: [
-      'Supervise a team of 100+ employees across all areas of the business, with approximately 60 team members daily',
-      'Develop and facilitate daily storewide meetings, workshops, and team training & on-boarding',
-      'Created and rolled out business training leading to +50%  business related connections, later being implemented market wide to all retail store',
+      'Acted as the primary liaison between the company and battalion, effectively coordinating across 6 departments to streamline day-to-day operations and support strategic objectives.',
+      'Led a team of 12 personnel in various training exercises, ensuring the team was well-prepared for operational readiness.',    
+      'Developed and maintained a comprehensive training database using Microsoft Excel for over 350 soldiers.',
     ],
-    location: 'Vancouver, BC',
-    link: { url: 'https://www.apple.com/ca/', label: 'Apple' },
+    link: { url: 'https://www.mindef.gov.sg/web/portal/mindef/home', label: 'Singapore Armed Forces' },
     logo: logoApple,
   },
   {
-    title: 'Genius',
-    company: 'Apple',
-    date: '2016 - 2018',
+    title: 'Robotics Intern',
+    company: 'A*STAR',
+    date: 'Jan 2022 - Jun 2022',
     description: [
-      'Provided technical support to customers, including troubleshooting, diagnosing, and repairing hardware and software issues',
-      'Strong people skills and a knack for problem solving',
-      'Maintain composure, provide empathy and customer focus while troubleshooting and solving technical issues',
+      'Developed and implemented software using ROS and Python to optimize Lidar point cloud data collection, enhancing efficiency of autonomous vehicle navigation.',
+      'Engineered and integrated mechanical components into the robotic system utilizing SolidWorks.',
+      'Designed a user-friendly interface using HTML and CSS to facilitate real-time control and movement of the robotic system.',
     ],
-    location: 'Vancouver, BC',
-    link: { url: 'https://www.apple.com/ca/', label: 'Apple' },
+    link: { url: 'https://www.a-star.edu.sg/', label: 'A*STAR - Agency for Science, Technology and Research' },
+    logo: logoApple,
+  },
+  {
+    title: 'Software Engineer Intern',
+    company: 'LFG Travel',
+    date: 'May 2024 - Aug 2024',
+    description: [
+      'Enhanced current platform website, integrating new features using NextJS, TailwindCSS and TypeScript.',
+      'Created efficient backend APIs leveraging AWS DynamoDB for data storage.',
+      'Contributed to new feature ideation through product management meetings and user research',
+    ],
+    link: { url: 'https://www.lfg.travel/', label: 'LFG Travel' },
     logo: logoApple,
   },
 ]
@@ -49,10 +59,7 @@ export default function Resume() {
           content={siteMetadata.experience.title}
         />
       </Head>
-      <SimpleLayout
-        title={siteMetadata.experience.title}
-        intro={siteMetadata.experience.intro}
-      >
+      <SimpleLayout>
         <h2 className="mb-6 text-3xl font-bold tracking-tight text-primaryText-800 dark:text-primaryText-100 sm:text-4xl">
           Work Experience
         </h2>
@@ -92,33 +99,6 @@ export default function Resume() {
           ))}
         </ul>
 
-        <div className="relative max-w-lg mx-auto mt-24 lg:max-w-7xl">
-          <div>
-            <h2 className="mb-6 text-3xl font-bold tracking-tight text-primaryText-800 dark:text-primaryText-100 sm:text-4xl">
-              Education
-            </h2>
-          </div>
-          <div className="grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
-            {siteMetadata.experience.education.map((item, index) => (
-              <Card key={`education-${index}`}>
-                <p className="text-sm text-primaryText-600 dark:text-primaryText-400">
-                  {item.startDate} - {item.endDate}
-                </p>
-                <div className="block mt-2">
-                  <p className="text-xl font-semibold text-primaryText-800 dark:text-primaryText-100">
-                    {item.degree}
-                  </p>
-                  <p className="text-base font-semibold text-primaryText-800 dark:text-primaryText-100">
-                    {item.schoolName}
-                  </p>
-                  <p className="mt-3 text-base text-primaryText-600 dark:text-primaryText-400">
-                    {item.description}
-                  </p>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
       </SimpleLayout>
     </>
   )
